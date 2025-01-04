@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed's Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Ahmed's 3D Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo">Ahmed's Portfolio</div>
@@ -18,53 +20,38 @@
         </nav>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h1>Welcome to My Portfolio</h1>
-            <p>I am Ahmed, a 3D artist specializing in modeling, product design, and visualization. Scroll down to explore my latest works!</p>
+            <p>I’m Ahmed, a passionate 3D artist specializing in modeling, product design, and visualization. Explore my latest works below!</p>
         </div>
     </section>
 
+    <!-- Gallery Section -->
     <section id="gallery">
         <div class="container">
             <h2>Gallery</h2>
 
-            <!-- Main Artwork Section -->
+            <!-- Artwork 1 -->
             <div class="artwork">
-                <img src="7.png" alt="3D Artwork 1" class="main-image">
-                <div class="description">
-                    <h3>3D Artwork Title 1</h3>
-                    <p>Description about this artwork goes here. Highlight the tools, inspiration, or purpose behind it.</p>
+                <div class="image-container">
+                    <img src="image-before.png" alt="Before Texturing" class="before-image">
+                    <img src="image-after.png" alt="After Texturing" class="after-image" onclick="openImage('image-after.png')">
                 </div>
-                <div class="sub-images">
-                    <img src="7.png" alt="3D Artwork Detail 1">
-                    <img src="7.png" alt="3D Artwork Detail 2">
-                    <img src="7.png" alt="3D Artwork Detail 3">
+                <div class="description">
+                    <h3>3D Artwork</h3>
+                    <p>This is a description of the artwork. Highlight its design process and tools used.</p>
                 </div>
             </div>
-
-            <!-- Repeat Artwork Sections -->
-            <div class="artwork">
-                <img src="7.png" alt="3D Artwork 2" class="main-image">
-                <div class="description">
-                    <h3>3D Artwork Title 2</h3>
-                    <p>Description about this artwork goes here. Explain its design process or key features.</p>
-                </div>
-                <div class="sub-images">
-                    <img src="7.png" alt="3D Artwork Detail 1">
-                    <img src="7.png" alt="3D Artwork Detail 2">
-                    <img src="7.png" alt="3D Artwork Detail 3">
-                </div>
-            </div>
-
-            <!-- Add More Sections as Needed -->
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Want to collaborate? Feel free to reach out:</p>
+            <p>If you'd like to work with me, feel free to get in touch:</p>
             <ul>
                 <li>Email: <a href="mailto:ahmed@example.com">ahmed@example.com</a></li>
                 <li>Phone: +123 456 7890</li>
@@ -73,8 +60,17 @@
         </div>
     </section>
 
+    <!-- Modal for Full Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img id="modalImage" class="modal-content" alt="Full Size Image">
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ahmed's Portfolio. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
